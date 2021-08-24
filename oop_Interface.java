@@ -22,11 +22,73 @@
    // 분업화 시스템 독립적으로 프로젝트 개발 가능 
    //4. 우선순위 extend가 먼저 
    // 상속을 받는 extend 와 구현을 하는 implement 둘중 동시에 쓰일때  extend 가 항상 먼저;
+    class Person {
+    String name;
+    int age;
+    int weight;
+
+    Person (){}
+    Person(String name, int age , int weight){
+        this.name = name;
+        this.age = age;
+        this.weight= weight;
+    }
+    
+    void wash(){
+        System.out.print("씻다");
+    }
+    void Study(){
+        System.out.print("공부");
+    }
+    void play(){
+        System.out.print("놀다");
+    }
+
+}
+interface Allowamce{ 
+	abstract void in(int price, String name); // 추상메서드만 ;
+	abstract void out(int price, String name);
+}
+
+
+interface Train{
+	
+	abstract void train( int training_pay, String name);
+}
+
+    class Student extends Person implements Allowamce, Train{
+        // 인터페이스는 implementsㅇ로 상속을 받는다 , 여러개를 한번에;  자식 클래스에서는 무조건 사용 
+        
+        // 필드;
+        Student(){}
+        Student(String name, int age, int weight ){
+            super();
+            
+            
+        }
+        //Allowamce method
+        @Override
+        public void in( int price ,String name) { 
+                                    
+                                        System.out.printf(" $s에게서 %d원 용돈을 받았다." , name, price);}
+        @Override
+        public void out( int price ,String name) {
+            
+                                        System.out.printf("%d원 금액을 지출했습니다. [지출용도 > %s]" , price ,name );}
+       
+        //Train method 
+        @Override
+        public void train( int training_pay, String name ) {
+                                        System.out.printf( "%s > %d원 입금 완료 ",name,training_pay );
+        }
+
+
 
 public class oop_Interface {
     
     public static void main(String[] args) {
         //
+        Student s1= new Student("이름", 20, 50);
     }
 
 }
