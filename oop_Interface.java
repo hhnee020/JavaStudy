@@ -46,7 +46,16 @@ void play(){
 }
 
 }
-interface Allowamce{ 
+interface Allowamce{
+	//변수는 안되나 상수는 지정 된다 ; public static final
+	//인터페이스 내 멤버 필드는  public static final  이어야 한다; 항상 그러므로 생략가능( 컴파일 과정에서 붙여짐 );
+	//public abstract  이어여한다;
+	public static final String aaa="korea";
+	public static final int bbb=1000;
+	// 상수는 가능하다;
+
+
+	///인터페이스 내 모든 메서드는 public abstract  이어여한다 생략가능;
 	abstract void in(int price, String name); // 추상메서드만 ;
 	abstract void out(int price, String name);
 }
@@ -111,6 +120,17 @@ public static void main(String[] args) {
 	//Allowamce
 	s1.train(50000, "아빠");
 	//Train
+
+	//!! 상수필드 사용하기;
+	///1)
+	System.out.println(s1.aaa);
+	System.out.println(s1.bbb);
+	// System.out.println(aaa); -- Err (x)
+
+	//2)Static :인스턴트 생성 없이 바로 접근 해서 사용가능
+	//  객체를 사용하지 않더라도 인터페이스명으로 접근 ;
+	System.out.println( Allowamce.aaa );
+	System.out.println( Allowamce.bbb );
 }
 
 }
