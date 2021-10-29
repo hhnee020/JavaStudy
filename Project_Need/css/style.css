@@ -1,0 +1,60 @@
+* {margin: 0 auto; padding: 0; text-align: center; text-decoration: none;
+    list-style: none;}
+    
+    .clearfix::before,
+    .clearfix::after{ display: block; content: ''; clear: both;}
+    #wrap{width: 1200px; margin: 0 auto;  font-size: 12px;}
+    header{ width: 100%;  line-height: 60px;    color: #999 }
+    
+    
+    .logo{float: left; width: 150px; }
+    
+    .login{float: right; width: 300px ;  }
+
+    .nav1 > ul {
+        display: flex; justify-content: center;
+    }
+    .nav1 > li { width: 100px; display: inline-block; }
+    .nav1 > li > a{ color: #999; border-left: 1px solid #999;
+        padding-left: 25%;} 
+    
+    
+    .nav{ float: left; width: 100% ; background: #04b4f6;}
+    .nav >ul>li{width: 10% ; float: left;} 
+    .nav > ul> li > a{ color: #fff ;  } 
+    .nav2 >ul { width: 100%; float: left;}
+    .nav2>ul>li{padding-left: 10px; padding-right: 10px; float: left;}
+
+    
+    .nav2 > ul> li > a{ color: #999   ; border-right: 1px solid #999;
+        padding-right: 40px;  padding-left: 20px;} 
+    
+    
+    .caption1 >h2{ margin: 15px;}
+    .sec1{ margin: 5%;}
+
+    table, th, td {border-collapse: collapse; border: 1px solid black; }
+    
+    .th1 ,.td1, .th1 > a ,.td1 > a{text-align: center;}
+    .table1{ width: 1000px; color : #666; border: solid 1px ; }
+
+    
+    .btn1 > .btn-primary{
+        background-color: #04b4f6;
+        border-color: #04b4f6;
+        color: #fff;
+    }
+    
+    .btn0{  border-top: 1px solid #666; margin: 10px;  }
+    
+    .btn0 > .btn{  margin: 5px; float: right; width: 10%;}
+    .btn0 > .btn> a{ color: #fff;}
+    
+    
+    .popupadm1  tr {height: 50px;}
+    .popupbtn1 > .btn-primary{
+        background-color: #04b4f6;
+        border-color: #04b4f6;
+        color: #fff;
+    }
+    

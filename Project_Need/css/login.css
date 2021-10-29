@@ -1,0 +1,27 @@
+header{
+    all: unset;
+}
+.login_box {
+    width: 350px;
+    height: 65px;
+    background-color: white;
+    border: 1px solid #555;
+}
+.login_box::placeholder {
+    text-align: left;
+    padding-left: 5%;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+#login_ul > li{
+    display: inline-block;
+    padding: 0 5% 0 5%;
+    border-right: 1px solid #555;
+}
+#outside_login li {
+    display: inline-block;
+    padding: 0 5% 0 5%;
+}
+#outside_login li > a > img {
+    width: 35px;
+}

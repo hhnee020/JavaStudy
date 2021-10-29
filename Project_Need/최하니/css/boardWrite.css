@@ -1,0 +1,21 @@
+table{
+    border: none;
+    width: 70%;
+    padding: 5%;
+    height: 500px;
+    margin: 0 auto;}
+
+.td1{ padding: 3px;}
+select, input{ width: 90%;}
+
+
+.btn_img{  width: 15%;
+    height: 74px;
+    float: left;
+    margin: 5%;}
+
+.th1{ height: 50px;}
+
+.bo_chk{width: 100%;}
+
+

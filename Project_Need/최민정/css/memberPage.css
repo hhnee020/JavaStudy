@@ -1,0 +1,307 @@
+.title{
+    width: 800px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+article{ width: 800px;}
+
+.th1{
+    background-color: #04b4f6;
+    color: #fff;
+    border: 1px solid black;
+}
+.td1 {border: 1px solid black;}
+
+.m_tb1{
+    width: 800px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.m_td1{
+    text-align: left;
+    padding: 10px;
+    width: 650px;
+    border: 1px solid black;
+}
+.m_btn{ 
+    padding: 10px 30px; 
+    background-color:#04b4f6;
+    border:1px solid #04b4f6;
+    border-radius: 5px;
+    color:#fff;
+}
+
+.m_btn:hover{
+    background-color: #07a4dd;
+}        
+
+.m_tb2{
+    width: 800px;
+    height: 150px;
+    border: 1px solid black; 
+}
+.m_btn2{
+    padding: 2px 10px;
+    margin-top: 10px;
+    float: left;
+}
+.m_btn3{
+    padding: 2px 10px;}
+.m_li{
+    padding-right: 10px;
+    border: 1px solid black;
+}
+.pg{
+    position: relative;
+    right: 70px;   
+}
+.add_tb{
+    width: 500px;
+    height: 250px;
+}
+.td2{
+    padding-left: 20px;
+    text-align: left;
+    width: 70%;
+    border: 1px solid black;
+}
+
+/*memberinfo*/
+.m_sec {
+    position: relative;
+    width: 1000px;
+    height: 800px;
+   
+}
+.info_tb{
+    width: 800px;
+    height: 400px;
+    border: 1px solid black; 
+}
+.info_th{ 
+    padding-left: 5px; 
+    width: 20%; 
+    background-color: #04b4f6;
+    color: #fff ; 
+    text-align: center;
+    border: 1px solid black; 
+}
+.info_btn{
+    margin-top: 20px;
+    text-align: center;
+}
+.info_td {
+    padding-left: 20px;
+    text-align: left;
+    width: 250px;
+    border: 1px solid black; 
+}
+textarea{
+    width: 80%;
+    height: 100px;
+}
+.join_tb{
+    width: 800px;
+    height: 400px;
+    border: 1px solid black; 
+}
+.pbox{
+    width: 50px;
+}
+.adbox{
+    width: 300px;
+    margin: 1px;
+    text-align: left;
+
+}
+.box{text-align: left;}
+
+
+
+/*register*/
+.agreearea{
+    margin-top: 30px;
+    width: 800px;
+}
+.agree{
+    border: 1px solid black;
+    background-color: rgb(202, 202, 202);
+    width: 800px;
+    height: 200px;
+    overflow: scroll;
+    overflow-x:hidden
+}
+h4 {
+text-align: left;
+}
+.agckbox {
+    text-align: right;
+    
+}
+.info_txt{ text-align: left;}
+
+/*myact*/
+.sec2{
+    margin-top: 5%;
+   
+}
+.act1{
+    border: 1px solid black;
+    width: 800px;
+    height: 150px;
+    text-align: left;
+   
+}
+
+#myimg{ 
+    border: 1px solid black;
+    width: 100px; height: 100px;
+    position: relative;
+    right: 300px;
+    top: 20px;
+
+}
+#name{
+    width: 110px; height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    float: left;
+    position: relative;
+    left: 200px;
+    bottom: 80px;
+   
+}
+#fw_btn{
+    width: 60px; height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+    right: 50px;
+    bottom: 80px;
+   
+}
+.follow{
+    width: 150px; height: 30px;
+    font-size: 15px;
+    font-weight: bold;   
+    position: relative;
+    right: 125px;
+    bottom: 50px;
+   
+    
+}
+.follow2{
+   
+    width: 150px; height: 30px;
+    font-size: 15px;
+    font-weight: bold;   
+    position: relative;
+    right: 125px;
+    bottom: 80px;
+   
+    
+}
+
+
+.fl > li { width: 70px; display: inline-block;}
+.follow>ul>li {  list-style-type: none; float: left; }
+
+/*tabs*/
+.act2{
+    width: 800px;
+    height: 300px;
+    margin-top: 20px;
+}
+
+/* 탭 전체 스타일 */
+.tabs {
+    border: 1px solid #999; 
+    margin-top: 50px;
+    padding-bottom: 40px;
+    background-color: #ffffff;
+    width: 800px;
+    height: 300px;
+    margin: 0 auto;
+    text-align: center;    
+}
+  
+  /* 탭 스타일 */
+  .tab_item {
+    width: calc(100%/5);
+    height: 50px;
+    border-bottom: 3px solid #04b4f6;
+    background-color: #ffffff;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #333333;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+  }
+  .tab_item:hover {
+    opacity: 0.75;
+  }
+  
+  /* 라디오 버튼 UI삭제*/
+  input[name="tab_item"] {
+    display: none;
+  }
+  
+  /* 탭 컨텐츠 스타일 */
+  .tab_content {
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+  }
+  
+  
+  /* 선택 된 탭 콘텐츠를 표시 */
+  #sale:checked ~ #sale_content,
+  #pick:checked ~ #pick_content,
+  #post:checked ~ #post_content
+  #comment:checked ~ #comment_content 
+  #like:checked ~ #like_content  {
+    display: block;
+  }
+  
+  /* 선택된 탭 스타일 */
+  .tabs input:checked + .tab_item {
+    background-color: #04b4f6;
+    color: #fff;
+  }
+  
+  /*내 관심사*/
+.tc { 
+    -ms-user-select: none;
+    -moz-user-select: -moz-none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    user-select:none;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+    color: #555;
+    margin: 0px 3px 0px 3px;
+}
+.hiddenCheckBox{
+    opacity: 0; 
+    z-index: -1;
+    display: none;
+}
+.as_tb{
+    width: 90%;
+    float: left;
+  
+}
+tr,td{
+    width: 50px;
+    height: 35px;
+}  

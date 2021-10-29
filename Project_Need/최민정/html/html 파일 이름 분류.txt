@@ -1,0 +1,16 @@
+
+--관리자모드--
+memberList - 회원목록
+memberInfo - 회원상세정보(관리자메모포함)
+memberOut - 탈퇴회원
+memberLevel - 회원등급
+addLevel - 신규등급추가 팝업
+
+
+--회원사용--
+register - 회원가입약관 동의
+memberJoin - 신규회원가입
+myinfo - 내정보수정
+myact - 나의활동내역(프로필)
+memberact - 타회원 활동내역(남의 프로필)
+
