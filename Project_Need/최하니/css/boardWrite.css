@@ -6,7 +6,7 @@ table{
     margin: 0 auto;}
 
 .td1{ padding: 3px;}
-select, input{ width: 90%;}
+select, input{ width: 90%; border: 0; text-align: left;}
 
 
 .btn_img{  width: 15%;

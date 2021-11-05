@@ -10,7 +10,15 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/ad_all.css">
 	<link rel="stylesheet" href="../../css/style.css">
-   
+  
+    <script>
+        function fn_popup1(){
+            var url = "ad_KategorieList.html";
+            var winl = (screen.width-500) / 2;
+            var wint = (screen.height-350) / 2;
+            window.open(url, '', 'status=no, height=' + 350  + ', width=' + 500  + ', left='+ winl + ', top='+ wint);
+        }
+     </script>
  </head>
 
 <body>
@@ -66,28 +74,27 @@
 	<div style = "width:700px; padding-left:70px; ">
 
 			<div style ="width:700px; text-align:left; margin-left:15px;">
-				<button type ="button" class= "nav_button" onclick="location='ad_board2.jsp' ">게시판 검색</button>
-				<button type ="button" class= "nav_button" onclick="location='ad_all.jsp' ">통합 관리</button>
-				<button type ="button" class= "nav_button" onclick="location='ad_comment.jsp' ">댓글 관리</button>
-				<button type ="button" class= "nav_button" onclick="location='ad_chart.jsp' ">게시판 통계</button>
-			</div>
-			<div style = "width:600px; border:1px solid #ffffff;background-color:#ccc; text-align:left; ">
+				<button type ="button" class= "nav_button" onclick="location='ad_board2.html' ">게시판 검색</button>
+				<button type ="button" class= "nav_button" onclick="location='ad_all.html' ">통합 관리</button>
+				<button type ="button" class= "nav_button" onclick="location='ad_comment.html' ">댓글 관리</button>
+				<button type ="button" class= "nav_button" onclick="location='ad_Decl.html' ">신고 게시판</button>
+				<button type="button"  class= "nav_button" onclick="fn_popup1(); return false;">카테고리 관리</button>			</div>
+			<div style = "width:600px; border:1px solid #ffffff;  text-align:left; ">
 			<span>검색  | </span><select>
 					<option value ="분류">분류</option>
 					<option value ="커뮤니티">커뮤니티</option>
 					<option value ="마켓">마켓</option>
-					<option value ="관리자">관리자</option>
 				</select>
-					<input type ="text" placeholder="검색어를 입력해주세요">
+					<input type ="text" placeholder="검색어를 입력해주세요" style ="height:18px;" >
 					<button type="button">검색</button>
 			</div>
 			<div style ="width:600px;">
 				<div style ="text-align:left;">
 				<span>총 검색 갯수 : 15개</span>
 				</div>
-				<div style ="float:right;">
-				+
-				</div>
+				<!--<div style ="float:right;">
+				 예전 추가 자리
+				</div>   -->
 			</div>	
 			<div style ="width:600px;">
 				<table class= "main_table">
@@ -103,8 +110,28 @@
 					</tr>
 					<tr>
 						<td>1</td>
-						<td>커뮤니티</td>
-						<td>신고 게시판</td>
+						<td>마켓</td>
+						<td>판매 게시판</td>
+						<td>노출</td>
+						<td>전체</td>
+						<td>전체</td>
+						<td>전체</td>
+						<td>수정/삭제</td>
+					</tr>
+						<tr>
+						<td>2</td>
+						<td>마켓</td>
+						<td>판매 게시판</td>
+						<td>노출</td>
+						<td>전체</td>
+						<td>전체</td>
+						<td>전체</td>
+						<td>수정/삭제</td>
+					</tr>
+						<tr>
+						<td>3</td>
+						<td>마켓</td>
+						<td>판매 게시판</td>
 						<td>노출</td>
 						<td>전체</td>
 						<td>전체</td>
@@ -112,9 +139,9 @@
 						<td>수정/삭제</td>
 					</tr>
 					<tr>
-						<td>1</td>
+						<td>4</td>
 						<td>커뮤니티</td>
-						<td>신고 게시판</td>
+						<td>동네 질문</td>
 						<td>노출</td>
 						<td>전체</td>
 						<td>전체</td>
@@ -122,9 +149,9 @@
 						<td>수정/삭제</td>
 					</tr>
 					<tr>
-						<td>1</td>
+						<td>5</td>
 						<td>커뮤니티</td>
-						<td>신고 게시판</td>
+						<td>동네 질문</td>
 						<td>노출</td>
 						<td>전체</td>
 						<td>전체</td>
@@ -132,9 +159,9 @@
 						<td>수정/삭제</td>
 					</tr>
 					<tr>
-						<td>1</td>
+						<td>6</td>
 						<td>커뮤니티</td>
-						<td>신고 게시판</td>
+						<td>동네 질문</td>
 						<td>노출</td>
 						<td>전체</td>
 						<td>전체</td>
@@ -142,29 +169,9 @@
 						<td>수정/삭제</td>
 					</tr>
 					<tr>
-						<td>1</td>
+						<td>7</td>
 						<td>커뮤니티</td>
-						<td>신고 게시판</td>
-						<td>노출</td>
-						<td>전체</td>
-						<td>전체</td>
-						<td>전체</td>
-						<td>수정/삭제</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>커뮤니티</td>
-						<td>신고 게시판</td>
-						<td>노출</td>
-						<td>전체</td>
-						<td>전체</td>
-						<td>전체</td>
-						<td>수정/삭제</td>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>커뮤니티</td>
-						<td>신고 게시판</td>
+						<td>동네 질문</td>
 						<td>노출</td>
 						<td>전체</td>
 						<td>전체</td>

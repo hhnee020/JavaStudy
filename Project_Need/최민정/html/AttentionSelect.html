@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>Need</title>
+    <style>
+
+        .tc { 
+            -ms-user-select: none;
+            -moz-user-select: -moz-none; 
+            -webkit-user-select: none; 
+            -khtml-user-select: none; 
+            user-select:none;
+            cursor: pointer;
+            padding: 5px 10px 5px 10px;
+            color: #555;
+            margin: 0px 3px 0px 3px;
+        }
+        .hiddenCheckBox{
+            opacity: 0; 
+            z-index: -1;
+            display: none;
+        }
+        table{
+            width: 50%;
+        }
+        tr,td{
+            width: 50px;
+            height: 40px;
+        }
+    </style>
+
+    <script>
+        $(function(){
+            var colum = 4;
+
+            var list = ["맛집","여행","감상","운동","음식","게임","캠핑","쇼핑","취미","음악","수다","드라이브"
+            ,"등산","비건","연예인","드라마","독서","사진","반려동물","육아","주식","코인","자연","공연"
+            ]
+            var attention = $("#attentionSelectTbody");
+            var attentionArray = new Array();
+
+            var trCnt = Math.ceil(list.length/colum); //tr 개수
+            var cnt = 0; //td에 들어갈 개수
+
+            for(var i = 0; i < trCnt; i++){
+
+                var tr = $("<tr></tr>");
+
+                for(var a = 0; a < colum; a ++){
+                    var td = $("<td class='tctd'></td>");
+                    //td생성 후 tr에 등록. 데이터가 비어있으면 else 공백으로 칸을 채움.
+                    if(list[cnt] != null){
+                        var labelDom = $("<label for='checkID"+cnt+"' class='tc'>"+list[cnt]+"</label>");
+                        var inputDom = $("<input type=checkbox id='checkID"+cnt+"' class='hiddenCheckBox'>")
+                        td.append(labelDom);
+                        td.append(inputDom);
+                        tr.append(td);
+                        cnt++;
+                    } else{
+                        td.append("");
+                        tr.append(td);
+                    }
+                }
+                //tr을 테이블에 등록
+                attention.append(tr);
+            }
+        });
+    </script>
+    
+</head>
+<body>
+
+    <h3 style="color: #555; padding-top: 3%; padding-bottom: 5%;">선호도 체크</h3>
+    <table>
+        <tbody id="attentionSelectTbody">
+        </tbody>
+    </table>
+
+    <!-- 글씨를 클릭했을 때 발생 -->
+    
+    <!-- <script>
+        $(function(){
+            $(".tc").click(function(){
+                var bool;
+                var label = $(this).attr("for");
+                var self = this;
+                setTimeout(function (){
+                    $("#"+label).is(":checked") == true ? bool = true : bool = false;
+                    if(bool){
+                        $(self).text($(self).text()+" x");
+                        $(self).css({
+                            "color": "#dc232d",
+                            "border": "1px solid #dc232d",
+                            "background-color":"#fdf5f4",
+                            "border-radius":"10px"
+                        });
+
+                    } else{
+                        $(self).text($(self).text().replaceAll(" x",""));
+                        $(self).removeAttr("style");
+                    }
+                },10);
+        });
+    });
+    </script> -->
+
+    
+    <!-- td를 클릭했을 때 발생 -->
+    <script>
+        $(function(){
+            $(".tctd").click(function(){
+                var self = $(this).children()[0];
+                var label = $(self).attr("for");
+                var checkbox = $("#"+label);
+
+                setTimeout(function (){
+                    if(!$("#"+label).is(":checked")){
+                        $("#"+label).prop("checked",true);
+                        $(self).text($(self).text()+" x");
+                        $(self).css({
+                            "color": "#dc232d",
+                            "border": "1px solid #dc232d",
+                            "background-color":"#fdf5f4",
+                            "border-radius":"10px"
+                        });
+
+                    } else{
+                        $(self).text($(self).text().replaceAll(" x",""));
+                        $(self).removeAttr("style");
+                        $("#"+label).prop("checked",false);
+                    }
+                },10);
+        });
+    });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/memberPage.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <title>회원관리</title>
+</head>
+
+<div id="wrap">
+
+    <header class="clearfix">
+        <img src="../img/Logo.png" class="logo">
+        
+    
+        <div class="login ">
+            
+            <ul class="nav1">
+            <li>
+                <a href="">관리자</a></li>
+            <li>
+                <a href="">로그아웃</a></li>
+    
+        </ul>
+        </div>
+        
+        <nav class="nav clearfix "> 
+            
+            <ul class="">
+                <li><a href="">공지사항</a></li>
+                <li><a href="">회원정보</a></li>
+                <li><a href="">게시판 관리</a></li>
+                <li><a href="">관리자 관리</a>
+                
+                </li>
+                
+                <li><a href="">문의 상담</a></li>
+                <li><a href="">접속통계</a></li>
+            </ul>    
+        
+        </nav>
+    
+        <nav class="nav2 clearfix "> 
+        <ul class="">
+            <li><a href="memberList.html">회원목록조회</a></li>
+            <li><a href="memberLevel.html">회원등급관리</a></li>
+            <li><a href="memberOut.html">탈퇴회원관리</a></li>
+            <li><a href="memberAnaly.html">회원통계</a></li>
+        </ul> 
+        </nav>
+    
+    
+    </header>
+    <section class="sec1">
+            <div>
+                <table class="m_tb1">
+                    <caption class="title">회원목록</caption>
+                    <tr>
+                        <th class="th1">조건검색</th>
+                        <td  class="m_td1">
+                            <select name="level">
+                                <option value="0">::등급선택::</option>
+                                <option value="1">동네인증회원</option>
+                                <option value="2">일반회원</option>
+                                <option value="3">계정정지</option>
+                            </select>
+                            <select name="category">
+                                <option value="name">이름</option>
+                                <option value="userid">아이디</option>
+                                <option value="phone">휴대폰</option>
+                                <option value="email">이메일</option>
+                                <option value="visit">방문수</option>
+                                <option value="join">가입일</option>
+                            </select>
+                            <input type="text" style="width:120px;">
+                            <button class="m_btn3">검색</button>     
+                        </td > 
+                    <tr> 
+                        <th class="th1">가입일</th>
+                        <td  class="m_td1"><input type="text"> ~ <input type="text"></td >
+                    </tr>
+                </table>
+            </div>
+            <div style="height: 30px; line-height: 2.5;">
+                총 회원수: 00, 검색회원수: 0
+               
+            </div>
+            <article>
+                <table class="m_tb2" border="1">
+                    <colgroup>
+                        <col width="5%"/>
+                        <col width="5%"/>
+                        <col width="13%"/>
+                        <col width="13%"/>
+                        <col width="14%"/>
+                        <col width="16%"/>
+                        <col width="12%"/>
+                        <col width="7%"/>
+                        <col width="15%"/>
+                    </colgroup>
+                    <tr>
+                        <th class="th1"><input type="checkbox"></th>
+                        <th class="th1">번호</th>
+                        <th class="th1">이름</th>
+                        <th class="th1">아이디</th>
+                        <th class="th1">휴대폰</th>
+                        <th class="th1">이메일</th>
+                        <th class="th1">등급</th>
+                        <th class="th1">방문수</th>
+                        <th class="th1">가입일</th>         
+                    </tr>
+                    <tr>
+                        <td ><input type="checkbox"></td >
+                        <td >4</td >
+                        <td ><a href="memberInfo.html">테스트</a></td >
+                        <td >test</td >
+                        <td >000-0000-0000</td >
+                        <td >aa@test.com</td >
+                        <td >동네인증회원</td >    
+                        <td >2</td >
+                        <td >0000-00-00</td >
+                    </tr>
+                    <tr>
+                        <td ><input type="checkbox"></td >
+                        <td >3</td >
+                        <td >테스트2</td >
+                        <td >test</td >
+                        <td >000-0000-0000</td >
+                        <td >bb@test.com</td >
+                        <td >동네인증회원</td >    
+                        <td >3</td >
+                        <td >0000-00-00</td >
+                    </tr>
+                    <tr>
+                        <td ><input type="checkbox"></td >
+                        <td >2</td >
+                        <td >테스트3</td >
+                        <td >test</td >
+                        <td >000-0000-0000</td >
+                        <td >bb@test.com</td >
+                        <td >동네인증회원</td >    
+                        <td >3</td >
+                        <td >0000-00-00</td >
+                    </tr>
+                    <tr>
+                        <td ><input type="checkbox"></td >
+                        <td >1</td >
+                        <td >테스트4</td >
+                        <td >test</td >
+                        <td >000-0000-0000</td >
+                        <td >bb@test.com</td >
+                        <td >동네인증회원</td >    
+                        <td >3</td >
+                        <td >0000-00-00</td >
+                    </tr>
+
+                </table>
+                <div>
+                <button class="m_btn2">회원삭제</button></div>
+            </article>
+            <br>
+            <div class="pg">
+                <nav aria-label="...">
+                    <ul class="pagination pagination-sm">
+                      <li class="page-item active" aria-current="page">
+                        <span class="page-link">1</span>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    </ul>
+                  </nav>
+            </div>  
+        </section>
+        
+
+</div>
+
+
+</body>
+</html>    

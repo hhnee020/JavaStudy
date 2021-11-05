@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    <title>Document</title>
+    
+    <style>
+        .inputTypeText{
+            width: 100px;
+        }
+        
+        .form-radio{
+            display: inline-block;
+            padding: 5px 10px 5px;
+            background-color: rgb(238, 238, 238);
+            border: 1px solid rgb(202, 202, 202);
+        }
+        .input-radio{
+            display: none;
+        }
+        
+        .input-radio:checked + .form-radio{
+            display: inline-block;
+            color: white;
+            padding: 5px 10px 5px;
+            background-color: #04b4f6;
+            border: 1px solid rgb(202, 202, 202);
+        }
+    </style>
+
+    <script>
+        $(function(){
+            $(".modify").click(function(){
+                //수정버튼 클릭 시 자신의 클래스 값을 가져온 후 필요한 문구 획득
+                var searchTarget = $(this).attr('class').replace('modify ','');
+
+                //선택자로 가공
+                var target = $('#'+searchTarget);
+
+                //선택자가 span이라면 input으로 변환
+                if(target.prop('tagName').toUpperCase() == 'SPAN'){
+                    var value = target.text();
+                    $(target).replaceWith("<input class='inputTypeText' id='"+searchTarget+"' value='"+value+"'>");
+                    $('#'+searchTarget+'_hidden').val = value;
+                    $(this).val("저장");
+
+                //선택자가 input이라면 span으로 변환
+                } else if(target.prop('tagName').toUpperCase() == 'INPUT'){
+                    var con = confirm("정말 저장하시겠습니까?");
+                    if(con){
+                        var value = target.val();
+                        $(target).replaceWith("<span id='" +searchTarget+ "'>" +value+ "</span>");
+                        $('#'+searchTarget+'_hidden').val(value);
+                        $(this).val("수정");
+                        
+                        $.ajax({
+                            type:"POST",
+                            data:"value="+value,
+                            url:"serverSave.jsp",
+                            dataType:"text",
+                            success: function(data){
+                                alert("정상적으로 저장되었습니다.");
+                            },
+                            error: function(data){
+                                alert("저장에 실패하였습니다.");
+                            }
+                        })
+                    }
+
+                //다른 값으로 바꿀려 할 시 문제 발생
+                } else{
+                    alert.log("올바르지 않는 접근")
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <header>
+            <div style="float: left; width: 90%;">
+                <input type="radio" id="all" name="select" class="input-radio" checked>
+                <label for="all" class="form-radio">전체</label>
+
+                <input type="radio" id="town" name="select" class="input-radio" >
+                <label for="town" class="form-radio">동네</label>
+
+                <input type="radio" id="market" name="select" class="input-radio" >
+                <label for="market" class="form-radio">마켓</label>
+
+                <input type="radio" id="declation" name="select" class="input-radio" >
+                <label for="declation" class="form-radio">신고</label>
+
+                <input type="radio" id="question" name="select" class="input-radio" >
+                <label for="question" class="form-radio">질문</label>
+            </div>
+            <div style="float: right;">
+                <input type="button" id="addButton" value="추가" onclick="location='ad_KategorieAdd.html'" >
+            </div>
+
+        </header>
+        <table style="padding-top: 5%; width:450px; border:1px solid #ccc; ">
+            <tr >
+                <th style ="text-align:center;"><span>번호</span></th>
+                <th><span>타입</span></th>
+                <th><span>카테고리</span></th>
+                <th><span>수정/삭제</span></th>
+            </tr>
+            <tr>
+                <td style ="text-align:center;"><span>1</span></td>
+                <td id="kind" style ="text-align:center;" ><span>마켓</span></td>
+                <td class="head btn1" style ="text-align:center;"><span id="btn1">구매해요</span><input type="hidden" id="btn1_hidden" value="구매해요"></td>
+                <td style ="text-align:center;"><input type="button" class="modify btn1" value="수정"><input type="button" id="delete" value="삭제"></td>
+            </tr>
+            <tr>
+                <td style ="text-align:center;"><span>2</span></td>
+                <td id="kind"  style ="text-align:center;"><span>마켓</span></td>
+                <td style ="text-align:center;" class="head btn2"><span id="btn2">판매해요</span><input type="hidden" id="btn2_hidden" value="판매해요"></td>
+                <td style ="text-align:center;"><input type="button" class="modify btn2" value="수정"><input type="button" id="delete" value="삭제"></td>
+            </tr>
+             <tr>
+                <td style ="text-align:center;"><span>3</span></td>
+                <td id="kind"  style ="text-align:center;"><span>동네</span></td>
+                <td style ="text-align:center;" class="head btn2"><span id="btn2">동네 약속</span><input type="hidden" id="btn2_hidden" value="판매해요"></td>
+                <td style ="text-align:center;"><input type="button" class="modify btn2" value="수정"><input type="button" id="delete" value="삭제"></td>
+            </tr>
+             <tr>
+                <td style ="text-align:center;"><span>4</span></td>
+                <td id="kind"  style ="text-align:center;"><span>동네</span></td>
+                <td style ="text-align:center;" class="head btn2"><span id="btn2">동네 알림</span><input type="hidden" id="btn2_hidden" value="판매해요"></td>
+                <td style ="text-align:center;"><input type="button" class="modify btn2" value="수정"><input type="button" id="delete" value="삭제"></td>
+            </tr>
+        </table>
+    </form>
+    <div style="text-align: center; margin-top:10px;">
+        <span><< < 1 2 3 4 5 6 7 8 9 > >></span>
+    </div>
+</body>
+</html>
